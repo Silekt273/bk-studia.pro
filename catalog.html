@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Каталог — БК-студия</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class="light-bg">
+
+    <header class="page-header">
+  <input type="checkbox" id="mobile-nav-toggle">
+
+  <div class="header-container">
+    <div class="header-logo">
+      <img src="../assets/images/лого3.webp" alt="БК-студия">
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="">О нас</a>
+      <a href="">Отзывы</a>
+      <a href="">Контакты</a>
+    </nav>
+
+    <label for="mobile-nav-toggle" class="hamburger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+  <nav class="mobile-nav-menu">
+    <div class="mobile-nav-links">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="">О нас</a>
+      <a href="">Отзывы</a>
+      <a href="">Контакты</a>
+    </div>
+  </nav>
+</header>
+    <div class="container">
+    <div class="catalog-header">
+        <h1>Каталог продукции</h1>
+
+        <div class="filters-row">
+            <div class="filter-item search-box">
+                <input type="text" placeholder="Поиск по названию или модели..." class="search-input">
+            </div>
+
+            <div class="filter-item dropdown-filter">
+                <input type="checkbox" id="dropdown-type" class="dropdown-checkbox">
+
+                <label for="dropdown-type" class="dropdown-trigger" tabindex="0">
+                    <span class="dropdown-text" data-default-text="Тип оборудования">Тип оборудования</span>
+                    <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z"/>
+                    </svg>
+                </label>
+
+                <div class="dropdown-content">
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="equipment-type" value="lab">
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Лабораторный стенд</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="equipment-type" value="model">
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Макеты и модели</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="equipment-type" value="simulator">
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Тренажеры</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="equipment-type" value="stand">
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Стенды</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="equipment-type" value="anatomy">
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Анатомические макеты</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-item dropdown-filter">
+                <input type="checkbox" id="dropdown-index" class="dropdown-checkbox">
+
+                <label for="dropdown-index" class="dropdown-trigger" tabindex="0">
+                    <span class="dropdown-text" data-default-text="Индекс">Индекс</span>
+                    <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z"/>
+                    </svg>
+                </label>
+
+                <div class="dropdown-content">
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="index" value="A">
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">НВНП</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="index" value="B">
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Б</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="index" value="C">
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">В</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="index" value="D">
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Г</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="index" value="E">
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Д</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-item dropdown-filter">
+                <input type="checkbox" id="dropdown-sort" class="dropdown-checkbox">
+
+                <label for="dropdown-sort" class="dropdown-trigger" tabindex="0">
+                    <span class="dropdown-text" data-default-text="Порядок сортировки">Порядок сортировки</span>
+                    <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z"/>
+                    </svg>
+                </label>
+
+                <div class="dropdown-content">
+                    <label class="radio-option">
+                        <input type="radio" name="sort-order" value="price-asc" checked="checked">
+                        <span class="radio-custom"></span>
+                        <span class="radio-text">Цена по возрастанию</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="sort-order" value="price-desc">
+                        <span class="radio-custom"></span>
+                        <span class="radio-text">Цена по убыванию</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="sort-order" value="name-asc">
+                        <span class="radio-custom"></span>
+                        <span class="radio-text">Название А-Я</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="sort-order" value="name-desc">
+                        <span class="radio-custom"></span>
+                        <span class="radio-text">Название Я-А</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="sort-order" value="new">
+                        <span class="radio-custom"></span>
+                        <span class="radio-text">Новые первыми</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-item checkbox-filter">
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input">
+                    <span class="checkbox-custom"></span>
+                    <span class="checkbox-text">В наличии</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="products-container">
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/product1.webp" alt="Продукт 1">
+                </div>
+
+                <div class="product-info-overlay">
+                    <div class="product-description">
+                        <h4>Лабораторный стенд "Система управления птицефермой"</h4>
+                        <p>Изучение общего устройства и основных характеристик системы управления птицефермой, принципов
+                            функционирования и режимов работы системы.</p>
+                    </div>
+
+                    <div class="product-specs">
+                        <div><strong>Производитель:</strong> ООО «ПКФ «БК-студия»</div>
+                        <div><strong>Гарантия:</strong> 12 месяцев</div>
+
+                    </div>
+
+                    <a href="#modal-product1" class="order-btn">Заказать стоимость</a>
+                </div>
+                <h3 class="product-name">Лабораторный стенд "Система управления птицефермой"</h3>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/product2.webp" alt="Продукт 2">
+                </div>
+                <div class="product-info-overlay">
+                    <div class="product-description">
+                        <h4>Макет разборный "Анатомическое строение свиньи"</h4>
+                        <p>Макет разборный "Анатомическое строение свиньи" представляет собой реалистичную модель
+                            животного. Он разбирается на части для наглядной демонстрации органов и фрагментов скелета
+                            свиньи. Макет удобно использовать для обучения и совершенствования навыков ветеринаров и
+                            других специалистов. Изучение анатомического строения свиньи</p>
+                    </div>
+
+                    <div class="product-specs">
+                        <div><strong>Производитель:</strong> ООО «ПКФ «БК-студия»</div>
+                        <div><strong>Гарантия:</strong> 12 месяцев</div>
+
+                    </div>
+
+                    <a href="#modal-product2" class="order-btn">Заказать стоимость</a>
+                </div>
+                <h3 class="product-name">Макет разборный "Анатомическое строение свиньи"</h3>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/product3.webp" alt="Продукт 3">
+                </div>
+                <div class="product-info-overlay">
+                    <div class="product-description">
+                        <h4>Макет "Птицефабрика"</h4>
+                        <p>Макет предназначен для демонстрации общей структуры и организации пространства птицефабрики
+                            (расположение основных объектов).</p>
+                    </div>
+
+                    <div class="product-specs">
+                        <div><strong>Производитель:</strong> ООО «ПКФ «БК-студия»</div>
+                        <div><strong>Гарантия:</strong> 12 месяцев</div>
+                    </div>
+
+                    <a href="#modal-product3" class="order-btn">Заказать стоимость</a>
+                </div>
+                <h3 class="product-name">Макет "Птицефабрика"</h3>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/product4.webp" alt="Продукт 4">
+                </div>
+                <div class="product-info-overlay">
+                    <div class="product-description">
+                        <h4>Макет анатомический разборный "Кулинарная разделка хрящевых рыб на примере
+                            осетра"</h4>
+                        <p>Изучение анатомического строения хрящевых рыб на примере осетра. Изучение способов кулинарной
+                            разделки осетра.</p>
+                    </div>
+
+                    <div class="product-specs">
+                        <div><strong>Производитель:</strong> ООО «ПКФ «БК-студия»</div>
+                        <div><strong>Гарантия:</strong> 12 месяцев</div>
+
+                    </div>
+
+                    <a href="#modal-product4" class="order-btn">Заказать стоимость</a>
+                </div>
+                <h3 class="product-name">Макет анатомический разборный "Кулинарная разделка хрящевых рыб на примере
+                    осетра"</h3>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/product5.webp" alt="Продукт 5">
+                </div>
+                <div class="product-info-overlay">
+                    <div class="product-description">
+                        <h4>Макет анатомический разборный "Кулинарная разделка свинины на крупнокусковые
+                            части"</h4>
+                        <p>Изучение анатомического строения свиньи. Изучение способов кулинарной разделки свинины на
+                            крупнокусковые части.</p>
+                    </div>
+
+                    <div class="product-specs">
+                        <div><strong>Производитель:</strong> ООО «ПКФ «БК-студия»</div>
+                        <div><strong>Гарантия:</strong> 12 месяцев</div>
+
+                    </div>
+
+                    <a href="#modal-product5" class="order-btn">Заказать стоимость</a>
+                </div>
+                <h3 class="product-name">Макет анатомический разборный "Кулинарная разделка свинины на крупнокусковые
+                    части"</h3>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/product6.webp" alt="Продукт 6">
+                </div>
+                <div class="product-info-overlay">
+                    <div class="product-description">
+                        <h4>Тренажер "Оператор БПЛА (тип: мультироторный)"</h4>
+                        <p>Отработка навыков оператора беспилотного летательного аппарата мультироторного типа.</p>
+                    </div>
+
+                    <div class="product-specs">
+                        <div><strong>Производитель:</strong> ООО «ПКФ «БК-студия»</div>
+                        <div><strong>Гарантия:</strong> 12 месяцев</div>
+
+                    </div>
+
+                    <a href="#modal-product6" class="order-btn">Заказать стоимость</a>
+                </div>
+                <h3 class="product-name">Тренажер "Оператор БПЛА (тип: мультироторный)"</h3>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/product7.webp" alt="Продукт 7">
+                </div>
+                <div class="product-info-overlay">
+                    <div class="product-description">
+                        <h4>Тренажер "Экскаватор-погрузчик на базе трактора МТЗ-82"</h4>
+                        <p>Отработка навыков управления экскаватором-погрузчиком (на базе трактора МТЗ-82). Выполнение
+                            практики по управлению трактором в различных условиях, по погрузке сыпучих материалов, по
+                            землеройным работам.</p>
+                    </div>
+
+                    <div class="product-specs">
+                        <div><strong>Производитель:</strong> ООО «ПКФ «БК-студия»</div>
+                        <div><strong>Гарантия:</strong> 12 месяцев</div>
+
+                    </div>
+
+                    <a href="#modal-product7" class="order-btn">Заказать стоимость</a>
+                </div>
+                <h3 class="product-name">Тренажер "Экскаватор-погрузчик на базе трактора МТЗ-82"</h3>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/product8.webp" alt="Продукт 8">
+                </div>
+                <div class="product-info-overlay">
+                    <div class="product-description">
+                        <h4>Стенд "Обработка субпродуктов и костей птицы и дичи"</h4>
+                        <p>Изучение технологии обработки субпродуктов и костей птицы и дичи.</p>
+                    </div>
+
+                    <div class="product-specs">
+                        <div><strong>Производитель:</strong> ООО «ПКФ «БК-студия»</div>
+                        <div><strong>Гарантия:</strong> 12 месяцев</div>
+
+                    </div>
+
+                    <a href="#modal-product8" class="order-btn">Заказать стоимость</a>
+                </div>
+                <h3 class="product-name">Стенд "Обработка субпродуктов и костей птицы и дичи"</h3>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/product9.webp" alt="Продукт 9">
+                </div>
+                <div class="product-info-overlay">
+                    <div class="product-description">
+                        <h4>Тренажер "Отработка навыков ортопедической обработки копытец КРС"</h4>
+                        <p>Получение практических навыков по обрезке копытного рога и лечению абсцесса мягких тканей
+                            конечности крупного рогатого скота (КРС).</p>
+                    </div>
+
+                    <div class="product-specs">
+                        <div><strong>Производитель:</strong> ООО «ПКФ «БК-студия»</div>
+                        <div><strong>Гарантия:</strong> 12 месяцев</div>
+
+                    </div>
+
+                    <a href="#modal-product9" class="order-btn">Заказать стоимость</a>
+                </div>
+                <h3 class="product-name">Тренажер "Отработка навыков ортопедической обработки копытец КРС"</h3>
+            </div>
+        </div>
+    </div>
+    <div class="pagination-container">
+        <div class="pagination">
+            <button class="page-btn prev-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4L6 8L10 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Назад
+            </button>
+
+            <div class="page-numbers">
+                <button class="page-number active">1</button>
+                <button class="page-number">2</button>
+                <button class="page-number">3</button>
+                <button class="page-number">4</button>
+                <button class="page-number">5</button>
+                <span class="page-dots">...</span>
+                <button class="page-number">12</button>
+            </div>
+
+            <button class="page-btn next-btn">
+                Вперед
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="pagination-info">
+            Показано 1-9 из 1056 товаров
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="modal-overlay" id="modal-product1">
+
+        <a href="#close" class="modal-close-overlay"></a>
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Заказать стоимость</h3>
+                <a href="#close" class="modal-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="modal-body">
+                <div class="product-title-section">
+                    <h4>Лабораторный стенд "Система управления птицефермой"</h4>
+                </div>
+
+                <form class="order-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="customerName1">Ваше имя *</label>
+                        <input type="text" id="customerName1" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerPhone1">Телефон *</label>
+                        <input type="tel" id="customerPhone1" name="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerEmail1">Email *</label>
+                        <input type="email" id="customerEmail1" name="email" placeholder="example@mail.ru" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerMessage1">Дополнительная информация</label>
+                        <textarea id="customerMessage1" name="message" placeholder="Укажите дополнительные пожелания или вопросы..." rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="agreePolicy1" name="agree" required>
+                        <label for="agreePolicy1">
+                            Я согласен на обработку персональных данных и с
+                            <a href="#" class="policy-link">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-product2">
+        <a href="#close" class="modal-close-overlay"></a>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Заказать стоимость</h3>
+                <a href="#close" class="modal-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="modal-body">
+                <div class="product-title-section">
+                    <h4>Макет разборный "Анатомическое строение свиньи"</h4>
+                </div>
+
+                <form class="order-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="customerName2">Ваше имя *</label>
+                        <input type="text" id="customerName2" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerPhone2">Телефон *</label>
+                        <input type="tel" id="customerPhone2" name="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerEmail2">Email *</label>
+                        <input type="email" id="customerEmail2" name="email" placeholder="example@mail.ru" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerMessage2">Дополнительная информация</label>
+                        <textarea id="customerMessage2" name="message" placeholder="Укажите дополнительные пожелания или вопросы..." rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="agreePolicy2" name="agree" required>
+                        <label for="agreePolicy2">
+                            Я согласен на обработку персональных данных и с
+                            <a href="#" class="policy-link">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-product3">
+        <a href="#close" class="modal-close-overlay"></a>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Заказать стоимость</h3>
+                <a href="#close" class="modal-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="modal-body">
+                <div class="product-title-section">
+                    <h4>Макет "Птицефабрика"</h4>
+                </div>
+
+                <form class="order-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="customerName3">Ваше имя *</label>
+                        <input type="text" id="customerName3" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerPhone3">Телефон *</label>
+                        <input type="tel" id="customerPhone3" name="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerEmail3">Email *</label>
+                        <input type="email" id="customerEmail3" name="email" placeholder="example@mail.ru" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerMessage3">Дополнительная информация</label>
+                        <textarea id="customerMessage3" name="message" placeholder="Укажите дополнительные пожелания или вопросы..." rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="agreePolicy3" name="agree" required>
+                        <label for="agreePolicy3">
+                            Я согласен на обработку персональных данных и с
+                            <a href="#" class="policy-link">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-product4">
+        <a href="#close" class="modal-close-overlay"></a>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Заказать стоимость</h3>
+                <a href="#close" class="modal-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="modal-body">
+                <div class="product-title-section">
+                    <h4>Макет анатомический разборный "Кулинарная разделка хрящевых рыб на примере осетра"</h4>
+                </div>
+
+                <form class="order-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="customerName4">Ваше имя *</label>
+                        <input type="text" id="customerName4" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerPhone4">Телефон *</label>
+                        <input type="tel" id="customerPhone4" name="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerEmail4">Email *</label>
+                        <input type="email" id="customerEmail4" name="email" placeholder="example@mail.ru" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerMessage4">Дополнительная информация</label>
+                        <textarea id="customerMessage4" name="message" placeholder="Укажите дополнительные пожелания или вопросы..." rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="agreePolicy4" name="agree" required>
+                        <label for="agreePolicy4">
+                            Я согласен на обработку персональных данных и с
+                            <a href="#" class="policy-link">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-product5">
+        <a href="#close" class="modal-close-overlay"></a>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Заказать стоимость</h3>
+                <a href="#close" class="modal-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="modal-body">
+                <div class="product-title-section">
+                    <h4>Макет анатомический разборный "Кулинарная разделка свинины на крупнокусковые части"</h4>
+                </div>
+
+                <form class="order-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="customerName5">Ваше имя *</label>
+                        <input type="text" id="customerName5" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerPhone5">Телефон *</label>
+                        <input type="tel" id="customerPhone5" name="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerEmail5">Email *</label>
+                        <input type="email" id="customerEmail5" name="email" placeholder="example@mail.ru" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerMessage5">Дополнительная информация</label>
+                        <textarea id="customerMessage5" name="message" placeholder="Укажите дополнительные пожелания или вопросы..." rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="agreePolicy5" name="agree" required>
+                        <label for="agreePolicy5">
+                            Я согласен на обработку персональных данных и с
+                            <a href="#" class="policy-link">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-product6">
+        <a href="#close" class="modal-close-overlay"></a>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Заказать стоимость</h3>
+                <a href="#close" class="modal-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="modal-body">
+                <div class="product-title-section">
+                    <h4>Тренажер "Оператор БПЛА (тип: мультироторный)"</h4>
+                </div>
+
+                <form class="order-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="customerName6">Ваше имя *</label>
+                        <input type="text" id="customerName6" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerPhone6">Телефон *</label>
+                        <input type="tel" id="customerPhone6" name="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerEmail6">Email *</label>
+                        <input type="email" id="customerEmail6" name="email" placeholder="example@mail.ru" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerMessage6">Дополнительная информация</label>
+                        <textarea id="customerMessage6" name="message" placeholder="Укажите дополнительные пожелания или вопросы..." rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="agreePolicy6" name="agree" required>
+                        <label for="agreePolicy6">
+                            Я согласен на обработку персональных данных и с
+                            <a href="#" class="policy-link">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-product7">
+        <a href="#close" class="modal-close-overlay"></a>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Заказать стоимость</h3>
+                <a href="#close" class="modal-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="modal-body">
+                <div class="product-title-section">
+                    <h4>Тренажер "Экскаватор-погрузчик на базе трактора МТЗ-82"</h4>
+                </div>
+
+                <form class="order-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="customerName7">Ваше имя *</label>
+                        <input type="text" id="customerName7" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerPhone7">Телефон *</label>
+                        <input type="tel" id="customerPhone7" name="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerEmail7">Email *</label>
+                        <input type="email" id="customerEmail7" name="email" placeholder="example@mail.ru" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerMessage7">Дополнительная информация</label>
+                        <textarea id="customerMessage7" name="message" placeholder="Укажите дополнительные пожелания или вопросы..." rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="agreePolicy7" name="agree" required>
+                        <label for="agreePolicy7">
+                            Я согласен на обработку персональных данных и с
+                            <a href="#" class="policy-link">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-product8">
+        <a href="#close" class="modal-close-overlay"></a>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Заказать стоимость</h3>
+                <a href="#close" class="modal-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="modal-body">
+                <div class="product-title-section">
+                    <h4>Стенд "Обработка субпродуктов и костей птицы и дичи"</h4>
+                </div>
+
+                <form class="order-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="customerName8">Ваше имя *</label>
+                        <input type="text" id="customerName8" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerPhone8">Телефон *</label>
+                        <input type="tel" id="customerPhone8" name="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerEmail8">Email *</label>
+                        <input type="email" id="customerEmail8" name="email" placeholder="example@mail.ru" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerMessage8">Дополнительная информация</label>
+                        <textarea id="customerMessage8" name="message" placeholder="Укажите дополнительные пожелания или вопросы..." rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="agreePolicy8" name="agree" required>
+                        <label for="agreePolicy8">
+                            Я согласен на обработку персональных данных и с
+                            <a href="#" class="policy-link">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-product9">
+        <a href="#close" class="modal-close-overlay"></a>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Заказать стоимость</h3>
+                <a href="#close" class="modal-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="modal-body">
+                <div class="product-title-section">
+                    <h4>Тренажер "Отработка навыков ортопедической обработки копытец КРС"</h4>
+                </div>
+
+                <form class="order-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="customerName9">Ваше имя *</label>
+                        <input type="text" id="customerName9" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerPhone9">Телефон *</label>
+                        <input type="tel" id="customerPhone9" name="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerEmail9">Email *</label>
+                        <input type="email" id="customerEmail9" name="email" placeholder="example@mail.ru" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerMessage9">Дополнительная информация</label>
+                        <textarea id="customerMessage9" name="message" placeholder="Укажите дополнительные пожелания или вопросы..." rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="agreePolicy9" name="agree" required>
+                        <label for="agreePolicy9">
+                            Я согласен на обработку персональных данных и с
+                            <a href="#" class="policy-link">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <a id="close" style="display: none;"></a>
+</div>
+    <footer class="footer-section">
+  <div class="container">
+    <div class="footer-content">
+
+
+      <div class="footer-brand">
+        <img src="../assets/images/лого2.webp" alt="Логотип БК-студия" class="footer-logo">
+      </div>
+
+
+      <div class="contacts-address-wrapper">
+
+        <div class="footer-contacts">
+          <h3 class="footer-title">Контакты</h3>
+          <div class="contact-item">
+            <span class="contact-label">Отдел продаж: <a href="tel:88001002369" class="contact-value">8(800) 100-23-69</a></span>
+            
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Служба поддержки: <a href="tel:88314649780" class="contact-value">8(831) 464-97-80</a></span>
+            
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Почта: <a href="mailto:info@bk-s.pro" class="contact-value">info@bk-s.pro</a></span>
+            
+          </div>
+        </div>
+
+
+        <div class="footer-address">
+          <h3 class="footer-title">Адрес</h3>
+          <div class="address-text">
+            603057, г. Нижний Новгород, пр. Гагарина, д. 50, корп. 15, оф. 205
+          </div>
+          <div class="work-hours">
+            <span class="hours-label">График работы:</span>
+            <span class="hours-value">Пн-Пт с 8:00 до 17:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer-divider">
+      <div class="divider-line"></div>
+    </div>
+
+
+    <div class="footer-bottom">
+      <div class="copyright-section">
+        <div class="copyright">© ООО «ПКФ «БК-студия» 2025</div>
+        <div class="rights">Все права защищены</div>
+      </div>
+
+
+      <div class="social-icons">
+        <a href="https://www.youtube.com/channel/UCCGlK4RgQ5Sf6t4lM47yCBA" class="social-icon youtube" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+          </svg>
+        </a>
+        <a href="https://vk.com/bk_studiya" class="social-icon vk" aria-label="ВКонтакте">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M15.073 2H8.938C3.332 2 2 3.333 2 8.927v6.136C2 20.667 3.323 22 8.927 22h6.136C20.667 22 22 20.677 22 15.073V8.938C22 3.332 20.677 2 15.073 2zm3.073 14.927h-1.531c-.552 0-.719-.447-1.708-1.437-.864-.833-1.229-.938-1.448-.938-.302 0-.385.083-.385.5v1.291c0 .354-.115.563-1.042.563-1.532 0-3.291-.833-4.708-2.708C5.948 12.938 5.059 10 5.01 9.958c-.062-.146-.083-.313.01-.448.104-.125.313-.167.448-.167h1.531c.375 0 .51.167.656.552.708 2.084 1.916 3.896 2.406 3.896.188 0 .271-.083.271-.552v-2.396c-.063-.98-.438-1.063-.438-1.396 0-.125.104-.24.24-.24h2.292c.313 0 .417.146.417.49v3.177c0 .313.135.417.229.417.188 0 .333-.104.677-.448 1.083-1.125 1.875-2.854 1.875-2.854.104-.208.271-.417.552-.417h1.531c.438 0 .542.229.438.542-.104.333-1.042 2.187-1.042 2.187-.104.208-.146.333 0 .531.104.208.458.521.667.792.917 1.083 1.458 1.958 1.542 2.291.104.313-.084.48-.438.48z"/>
+          </svg>
+        </a>
+        <a href="bk-s.pro" class="social-icon dzen" aria-label="Яндекс Дзен">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+<g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M46.894,23.986c0.004,0 0.007,0 0.011,0c0.279,0 0.545,-0.117 0.734,-0.322c0.192,-0.208 0.287,-0.487 0.262,-0.769c-1.004,-11.043 -9.747,-19.789 -20.791,-20.795c-0.28,-0.022 -0.562,0.069 -0.77,0.262c-0.208,0.192 -0.324,0.463 -0.321,0.746c0.174,14.676 2.11,20.673 20.875,20.878zM46.894,26.014c-18.765,0.205 -20.7,6.202 -20.874,20.878c-0.003,0.283 0.113,0.554 0.321,0.746c0.186,0.171 0.429,0.266 0.679,0.266c0.03,0 0.061,-0.001 0.091,-0.004c11.044,-1.006 19.787,-9.751 20.79,-20.795c0.025,-0.282 -0.069,-0.561 -0.262,-0.769c-0.193,-0.208 -0.462,-0.311 -0.745,-0.322zM22.823,2.105c-11.009,1.035 -19.724,9.779 -20.723,20.792c-0.025,0.282 0.069,0.561 0.262,0.769c0.189,0.205 0.456,0.321 0.734,0.321c0.004,0 0.008,0 0.012,0c18.703,-0.215 20.634,-6.209 20.81,-20.875c0.003,-0.283 -0.114,-0.555 -0.322,-0.747c-0.21,-0.192 -0.491,-0.286 -0.773,-0.26zM3.107,26.013c-0.311,-0.035 -0.555,0.113 -0.746,0.321c-0.192,0.208 -0.287,0.487 -0.262,0.769c0.999,11.013 9.715,19.757 20.724,20.792c0.031,0.003 0.063,0.004 0.094,0.004c0.25,0 0.492,-0.094 0.678,-0.265c0.208,-0.192 0.325,-0.464 0.322,-0.747c-0.176,-14.665 -2.106,-20.659 -20.81,-20.874z"></path></g></g>
+</svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+ 
+
+</body>
+
+</html>
