@@ -3462,29 +3462,6 @@
     transform: none
 }
 
-.page-btn svg {
-    width: 14px;
-    height: 14px;
-    transition: transform .2s;
-    flex-shrink: 0
-}
-
-.prev-btn svg {
-    transform: rotate(90deg)
-}
-
-.next-btn svg {
-    transform: rotate(-90deg)
-}
-
-.prev-btn:hover:not(:disabled) svg {
-    transform: rotate(90deg) translateX(-1px)
-}
-
-.next-btn:hover:not(:disabled) svg {
-    transform: rotate(-90deg) translateX(1px)
-}
-
 .page-numbers {
     display: flex;
     gap: 4px;
