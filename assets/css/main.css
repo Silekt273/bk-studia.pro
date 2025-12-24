@@ -550,12 +550,12 @@
 
 @font-face {
     font-family: sans_reg;
-    src: url(/bk-studia.pro/assets/fonts/PT_Sans-Caption-Web-Regular.ttf)
+    src: url(/assets/fonts/PT_Sans-Caption-Web-Regular.ttf)
 }
 
 @font-face {
     font-family: sans_bold;
-    src: url(/bk-studia.pro/assets/fonts/PT_Sans-Caption-Web-Bold.ttf)
+    src: url(/assets/fonts/PT_Sans-Caption-Web-Bold.ttf)
 }
 
 .font-sans {
@@ -3460,6 +3460,29 @@
     background: #fff;
     color: #999;
     transform: none
+}
+
+.page-btn svg {
+    width: 14px;
+    height: 14px;
+    transition: transform .2s;
+    flex-shrink: 0
+}
+
+.prev-btn svg {
+    transform: rotate(90deg)
+}
+
+.next-btn svg {
+    transform: rotate(-90deg)
+}
+
+.prev-btn:hover:not(:disabled) svg {
+    transform: rotate(90deg) translateX(-1px)
+}
+
+.next-btn:hover:not(:disabled) svg {
+    transform: rotate(-90deg) translateX(1px)
 }
 
 .page-numbers {
