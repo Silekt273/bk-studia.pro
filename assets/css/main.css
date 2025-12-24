@@ -550,12 +550,12 @@
 
 @font-face {
     font-family: sans_reg;
-    src: url(/assets/fonts/PT_Sans-Caption-Web-Regular.ttf)
+    src: url(/bk-studia.pro/assets/fonts/PT_Sans-Caption-Web-Regular.ttf)
 }
 
 @font-face {
     font-family: sans_bold;
-    src: url(/assets/fonts/PT_Sans-Caption-Web-Bold.ttf)
+    src: url(/bk-studia.pro/assets/fonts/PT_Sans-Caption-Web-Bold.ttf)
 }
 
 .font-sans {
