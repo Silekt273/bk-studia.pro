@@ -3469,7 +3469,28 @@
     justify-content: center;
     flex-wrap: nowrap
 }
+.page-btn svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin: 0 8px;
+}
 
+.page-btn.prev-btn {
+    flex-direction: row;
+}
+
+.page-btn.next-btn {
+    flex-direction: row-reverse;
+}
+
+.page-btn:hover:not(:disabled) svg {
+    transform: translateX(2px);
+}
+
+.page-btn.prev-btn:hover:not(:disabled) svg {
+    transform: translateX(-2px);
+}
 .page-number {
     display: flex;
     align-items: center;
